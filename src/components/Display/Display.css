@@ -1,0 +1,15 @@
+.display-container {
+  align-items: center;
+  background: var(--display-background);
+  display: flex;
+  padding: 4% 4% 0 4%;
+  width: 92%;
+}
+
+.display-value {
+  color: var(--display-text-color);
+  font-size: var(--display-text-size);
+  font-family: var(--main-font);
+  font-weight: var(--display-text-weight);
+  margin-left: auto;
+}

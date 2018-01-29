@@ -1,0 +1,33 @@
+/* app variables here */
+
+:root {
+  /* colors */
+  --action-key: #545454;
+  --action-key-hover: #2a2a2a;
+  --display-background: #1d1f1f;
+  --display-text-color: #23e000;
+  --key-text-color: #d3d3d3;
+  --keypad-background: #696969;
+  --number-key: #696969;
+  --number-key-hover: #3f3f3f;
+
+  /* font */
+  --main-font: 'Orbitron', sans-serif;
+
+  /* font sizes */
+  --display-text-size: 5em;
+  --key-text-size: 3em;
+
+  /* font weights */
+  --display-text-weight: 400;
+  --key-text-weight: 700;
+
+}
+
+/* global css here */
+
+body, div, p {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
