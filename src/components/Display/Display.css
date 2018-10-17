@@ -1,9 +1,10 @@
 .display-container {
   align-items: center;
-  background: var(--display-background);
+  background: var(--display-background-color);
   display: flex;
-  padding: 4% 4% 0 4%;
-  width: 92%;
+  height: var(--display-height);
+  padding: 0 4%;
+  width: var(--display-width);
 }
 
 .display-value {
@@ -12,4 +13,5 @@
   font-family: var(--main-font);
   font-weight: var(--display-text-weight);
   margin-left: auto;
+  overflow: hidden;
 }

@@ -1,28 +1,32 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Keypad.css';
 
 import Key from '../Key/Key';
+import './Keypad.css';
 
-const Keypad = () => {
-  let numbers = ['ce', 0, '.', 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  let actions = ['/', 'x', '-', '+'];
+const Keypad = ({ operators, callOperator, handleKeyPress, numbers, setOperator, updateDisplay }) => {
 
-  numbers = numbers.reverse().map((number, iterator) => {
+  numbers = numbers.map((number, iterator) => {
     return (
       <Key
+        handleKeyPress={handleKeyPress}
         key={`${number}${iterator}`}
-        keyType="number-key" 
+        keyType="number-key"
         keyValue={number}
+        keyAction={updateDisplay}
       />
     );
   });
 
-  actions = actions.map((action, iterator) => {
+  operators = operators.map((operator, iterator) => {
     return (
       <Key
-        key={`${action}${iterator}`}
-        keyType="action-key" 
-        keyValue={action} 
+        handleKeyPress={handleKeyPress}
+        key={`${operator}${iterator}`}
+        keyType="operator-key"
+        keyValue={operator}
+        keyAction={setOperator}
       />
     );
   });
@@ -32,11 +36,33 @@ const Keypad = () => {
       <div className="numbers-container">
         {numbers}
       </div>
-      <div className="actions-container">
-        {actions}
+      <div className="operators-container">
+        {operators}
       </div>
-    </div>
+      <div className="submit-container">
+        <Key
+          handleKeyPress={handleKeyPress}
+          keyType="submit-key"
+          keyValue="="
+          keyAction={callOperator}
+        />
+      </div>
+    </div >
   );
+}
+
+Keypad.propTypes = {
+  callOperator: PropTypes.func.isRequired,
+  handleKeyPress: PropTypes.func.isRequired,
+  numbers: PropTypes.array.isRequired,
+  operators: PropTypes.array.isRequired,
+  setOperator: PropTypes.func.isRequired,
+  updateDisplay: PropTypes.func.isRequired
+}
+
+Keypad.defaultProps = {
+  numbers: [],
+  operators: [],
 }
 
 export default Keypad;

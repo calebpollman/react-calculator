@@ -10,22 +10,32 @@
   cursor: pointer;
 }
 
-.action-key {
-  background-color: var(--action-key);
+.operator-key {
+  background-color: var(--action-key-color);
   width: 100%;
 }
 
-.action-key:hover {
-  background-color: var(--action-key-hover); 
+.operator-key:hover {
+  background-color: var(--action-key-color-hover); 
 }
 
 .number-key {
-  background-color: var(--number-key);
+  background-color: var(--number-key-color);
   width: calc(100%/3);
 }
 
 .number-key:hover {
-  background-color: var(--number-key-hover);
+  background-color: var(--number-key-color-hover);
+}
+
+.submit-key {
+  background-color: var(--submit-key-color);
+  height: 100%;
+  width: 100%;
+}
+
+.submit-key:hover {
+  background-color: var(--submit-key-color-hover);
 }
 
 .key-value {

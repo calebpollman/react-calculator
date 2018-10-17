@@ -1,4 +1,6 @@
 .calculator-container {
-  height: 60%;
-  width: 24%;
+  background-color: var(--calculator-background-color);
+  height: var(--calculator-height);
+  width: var(--calculator-width);
 }
+

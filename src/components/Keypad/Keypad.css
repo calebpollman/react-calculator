@@ -1,25 +1,28 @@
 .keypad-container {
-  background: var(--keypad-background);
-  display: flex;
-  flex-direction: row;
-  height: 76%;
-  padding: 2%;
-  width: 96%;
-}
-
-.numbers-container {
-  background: lightgray;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 100%;
+  height: var(--keypad-height);
+  padding: 2%;
+  width: var(--keypad-width);
+}
+
+.numbers-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 80%;
   width: 75%;
 }
 
-.actions-container {
-  background: darkgray;
+.operators-container {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 80%;
   width: 25%;
+}
+
+.submit-container {
+  height: 20%;
+  width: 100%;
 }

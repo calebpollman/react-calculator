@@ -21,4 +21,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # post
-post.md
+/post
+old_post.md
