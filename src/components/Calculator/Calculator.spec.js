@@ -6,13 +6,9 @@ import Keypad from '../Keypad/Keypad';
 
 describe('Calculator', () => {
   let wrapper;
-  beforeEach(() => {
-    wrapper = shallow(<Calculator />);
-  });
+  beforeEach(() => wrapper = shallow(<Calculator />));
 
-  it('should render correctly', () => {
-    expect(wrapper).toMatchSnapshot();
-  });
+  it('should render correctly', () => expect(wrapper).toMatchSnapshot());
 
   it('should render a <div />', () => {
     expect(wrapper.find('div').length).toEqual(1);
@@ -35,9 +31,7 @@ describe('Calculator', () => {
 
 describe('updateDisplay', () => {
   let wrapper;
-  beforeEach(() => {
-    wrapper = shallow(<Calculator />);
-  });
+  beforeEach(() => wrapper = shallow(<Calculator />));
 
   it('updates displayValue', () => {
     wrapper.instance().updateDisplay('5');
@@ -84,9 +78,7 @@ describe('updateDisplay', () => {
 
 describe('setOperator', () => {
   let wrapper;
-  beforeEach(() => {
-    wrapper = shallow(<Calculator />);
-  });
+  beforeEach(() => wrapper = shallow(<Calculator />));
 
   it('updates the value of selectedOperator', () => {
     wrapper.instance().setOperator('+');
@@ -118,9 +110,7 @@ describe('setOperator', () => {
 
 describe('callOperator', () => {
   let wrapper;
-  beforeEach(() => {
-    wrapper = shallow(<Calculator />);
-  });
+  beforeEach(() => wrapper = shallow(<Calculator />));
 
   it('updates displayValue to the sum of storedValue and displayValue', () => {
     wrapper.setState({ storedValue: '3' });
@@ -189,9 +179,7 @@ describe('callOperator', () => {
 
 describe('mounted Calculator', () => {
   let wrapper;
-  beforeEach(() => {
-    wrapper = mount(<Calculator />);
-  });
+  beforeEach(() => wrapper = mount(<Calculator />));
 
   it('calls updateDisplay when a number key is clicked', () => {
     const spy = jest.spyOn(wrapper.instance(), 'updateDisplay');

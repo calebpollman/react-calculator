@@ -7,37 +7,33 @@ import './Keypad.css';
 
 const Keypad = ({ operators, callOperator, handleKeyPress, numbers, setOperator, updateDisplay }) => {
 
-  numbers = numbers.map((number, iterator) => {
-    return (
-      <Key
-        handleKeyPress={handleKeyPress}
-        key={`${number}${iterator}`}
-        keyType="number-key"
-        keyValue={number}
-        keyAction={updateDisplay}
-      />
-    );
-  });
+  const numberKeys = numbers.map((number, iterator) => (
+    <Key
+      handleKeyPress={handleKeyPress}
+      key={`${number}${iterator}`}
+      keyType="number-key"
+      keyValue={number}
+      keyAction={updateDisplay}
+    />
+  ));
 
-  operators = operators.map((operator, iterator) => {
-    return (
-      <Key
-        handleKeyPress={handleKeyPress}
-        key={`${operator}${iterator}`}
-        keyType="operator-key"
-        keyValue={operator}
-        keyAction={setOperator}
-      />
-    );
-  });
+  const operatorKeys = operators.map((operator, iterator) => (
+    <Key
+      handleKeyPress={handleKeyPress}
+      key={`${operator}${iterator}`}
+      keyType="operator-key"
+      keyValue={operator}
+      keyAction={setOperator}
+    />
+  ));
 
   return (
     <div className="keypad-container">
       <div className="numbers-container">
-        {numbers}
+        {numberKeys}
       </div>
       <div className="operators-container">
-        {operators}
+        {operatorKeys}
       </div>
       <div className="submit-container">
         <Key
