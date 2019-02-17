@@ -2,6 +2,7 @@
   "name": "tdd-react-calculator",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://antoniojgage.github.io/react-calculator",
   "dependencies": {
     "react": "^16.6.0",
     "react-dom": "^16.6.0"
@@ -9,6 +10,7 @@
   "devDependencies": {
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
+    "gh-pages": "^2.0.1",
     "react-scripts": "2.1.0",
     "react-test-renderer": "^16.6.0"
   },
@@ -16,7 +18,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     ">0.2%",
