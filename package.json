@@ -1,5 +1,6 @@
 {
   "name": "tdd-react-calculator",
+  "author": "caleb pollman",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,7 +10,8 @@
   "devDependencies": {
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
-    "react-scripts": "2.1.0",
+    "enzyme-to-json": "3.3.5",
+    "react-scripts": "3.0.1",
     "react-test-renderer": "^16.6.0"
   },
   "scripts": {
@@ -23,5 +25,10 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  }
 }

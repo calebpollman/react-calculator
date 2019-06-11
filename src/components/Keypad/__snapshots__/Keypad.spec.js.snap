@@ -1,210 +1,118 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Keypad should render correctly 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Keypad
-    callOperator={[MockFunction]}
-    handleKeyPress={[MockFunction]}
-    numbers={Array []}
-    operators={Array []}
-    setOperator={[MockFunction]}
-    updateDisplay={[MockFunction]}
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <div
-          className="numbers-container"
-        />,
-        <div
-          className="operators-container"
-        />,
-        <div
-          className="submit-container"
-        >
-          <Key
-            handleKeyPress={[MockFunction]}
-            keyAction={[MockFunction]}
-            keyType="submit-key"
-            keyValue="="
-          />
-        </div>,
-      ],
-      "className": "keypad-container",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [],
-          "className": "numbers-container",
-        },
-        "ref": null,
-        "rendered": Array [],
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [],
-          "className": "operators-container",
-        },
-        "ref": null,
-        "rendered": Array [],
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <Key
-            handleKeyPress={[MockFunction]}
-            keyAction={[MockFunction]}
-            keyType="submit-key"
-            keyValue="="
-          />,
-          "className": "submit-container",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "handleKeyPress": [MockFunction],
-            "keyAction": [MockFunction],
-            "keyType": "submit-key",
-            "keyValue": "=",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        "type": "div",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <div
-            className="numbers-container"
-          />,
-          <div
-            className="operators-container"
-          />,
-          <div
-            className="submit-container"
-          >
-            <Key
-              handleKeyPress={[MockFunction]}
-              keyAction={[MockFunction]}
-              keyType="submit-key"
-              keyValue="="
-            />
-          </div>,
-        ],
-        "className": "keypad-container",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [],
-            "className": "numbers-container",
-          },
-          "ref": null,
-          "rendered": Array [],
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [],
-            "className": "operators-container",
-          },
-          "ref": null,
-          "rendered": Array [],
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": <Key
-              handleKeyPress={[MockFunction]}
-              keyAction={[MockFunction]}
-              keyType="submit-key"
-              keyValue="="
-            />,
-            "className": "submit-container",
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "handleKeyPress": [MockFunction],
-              "keyAction": [MockFunction],
-              "keyType": "submit-key",
-              "keyValue": "=",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          "type": "div",
-        },
-      ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-}
+<div
+  className="keypad-container"
+>
+  <div
+    className="numbers-container"
+  >
+    <Key
+      handleKeyPress={[MockFunction]}
+      key="70"
+      keyAction={[MockFunction]}
+      keyType="number-key"
+      keyValue="7"
+    />
+    <Key
+      handleKeyPress={[MockFunction]}
+      key="131"
+      keyAction={[MockFunction]}
+      keyType="number-key"
+      keyValue="13"
+    />
+  </div>
+  <div
+    className="operators-container"
+  >
+    <Key
+      handleKeyPress={[MockFunction]}
+      key="+0"
+      keyAction={[MockFunction]}
+      keyType="operator-key"
+      keyValue="+"
+    />
+    <Key
+      handleKeyPress={[MockFunction]}
+      key="-1"
+      keyAction={[MockFunction]}
+      keyType="operator-key"
+      keyValue="-"
+    />
+  </div>
+  <div
+    className="submit-container"
+  >
+    <Key
+      handleKeyPress={[MockFunction]}
+      keyAction={[MockFunction]}
+      keyType="submit-key"
+      keyValue="="
+    />
+  </div>
+</div>
+`;
+
+exports[`Keypad should render correctly 2`] = `
+<div
+  class="keypad-container"
+>
+  <div
+    class="numbers-container"
+  >
+    <div
+      class="key-container number-key"
+    >
+      <p
+        class="key-value"
+      >
+        7
+      </p>
+    </div>
+    <div
+      class="key-container number-key"
+    >
+      <p
+        class="key-value"
+      >
+        13
+      </p>
+    </div>
+  </div>
+  <div
+    class="operators-container"
+  >
+    <div
+      class="key-container operator-key"
+    >
+      <p
+        class="key-value"
+      >
+        +
+      </p>
+    </div>
+    <div
+      class="key-container operator-key"
+    >
+      <p
+        class="key-value"
+      >
+        -
+      </p>
+    </div>
+  </div>
+  <div
+    class="submit-container"
+  >
+    <div
+      class="key-container submit-key"
+    >
+      <p
+        class="key-value"
+      >
+        =
+      </p>
+    </div>
+  </div>
+</div>
 `;
