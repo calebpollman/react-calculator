@@ -6,7 +6,6 @@ import Key from '../Key/Key';
 import './Keypad.css';
 
 const Keypad = ({ operators, callOperator, handleKeyPress, numbers, setOperator, updateDisplay }) => {
-
   const numberKeys = numbers.map((number, iterator) => (
     <Key
       handleKeyPress={handleKeyPress}
@@ -29,23 +28,14 @@ const Keypad = ({ operators, callOperator, handleKeyPress, numbers, setOperator,
 
   return (
     <div className="keypad-container">
-      <div className="numbers-container">
-        {numberKeys}
-      </div>
-      <div className="operators-container">
-        {operatorKeys}
-      </div>
+      <div className="numbers-container">{numberKeys}</div>
+      <div className="operators-container">{operatorKeys}</div>
       <div className="submit-container">
-        <Key
-          handleKeyPress={handleKeyPress}
-          keyType="submit-key"
-          keyValue="="
-          keyAction={callOperator}
-        />
+        <Key handleKeyPress={handleKeyPress} keyType="submit-key" keyValue="=" keyAction={callOperator} />
       </div>
-    </div >
+    </div>
   );
-}
+};
 
 Keypad.propTypes = {
   callOperator: PropTypes.func.isRequired,
@@ -53,12 +43,12 @@ Keypad.propTypes = {
   numbers: PropTypes.array.isRequired,
   operators: PropTypes.array.isRequired,
   setOperator: PropTypes.func.isRequired,
-  updateDisplay: PropTypes.func.isRequired
-}
+  updateDisplay: PropTypes.func.isRequired,
+};
 
 Keypad.defaultProps = {
   numbers: [],
   operators: [],
-}
+};
 
 export default Keypad;

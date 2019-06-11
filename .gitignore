@@ -19,7 +19,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# post
-/post
-old_post.md

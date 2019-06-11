@@ -12,34 +12,34 @@ class Calculator extends Component {
     operators: ['/', 'x', '-', '+'],
     selectedOperator: '',
     storedValue: '',
-  }
+  };
 
   componentWillMount = () => {
     document.addEventListener('keydown', this.handleKeyPress);
-  }
+  };
 
   componentWillUnmount = () => {
     document.removeEventListener('keydown', this.handleKeyPress);
-  }
+  };
 
-  handleKeyPress = (event) => {
+  handleKeyPress = event => {
     const { numbers, operators } = this.state;
 
     if (event.key === 'Backspace') this.updateDisplay(event, 'ce');
     if (event.key === 'Enter' || event.key === '=') this.callOperator(event);
 
-    numbers.forEach((number) => {
+    numbers.forEach(number => {
       if (event.key === number) {
         this.updateDisplay(event, number);
       }
     });
 
-    operators.forEach((operator) => {
+    operators.forEach(operator => {
       if (event.key === operator) {
         this.setOperator(event, operator);
       }
     });
-  }
+  };
 
   callOperator = () => {
     let { displayValue, selectedOperator, storedValue } = this.state;
@@ -70,7 +70,7 @@ class Calculator extends Component {
     if (displayValue === 'NaN' || displayValue === 'Infinity') displayValue = '0';
 
     this.setState({ displayValue, selectedOperator, storedValue: updateStoredValue });
-  }
+  };
 
   handleKeyPress = event => {
     const { numbers, operators } = this.state;
@@ -85,7 +85,7 @@ class Calculator extends Component {
     operators.forEach(operator => {
       if (event.key === operator) this.setOperator(operator);
     });
-  }
+  };
 
   setOperator = value => {
     let { displayValue, selectedOperator, storedValue } = this.state;
@@ -99,7 +99,7 @@ class Calculator extends Component {
     }
 
     this.setState({ displayValue, selectedOperator, storedValue });
-  }
+  };
 
   updateDisplay = value => {
     let { displayValue } = this.state;
@@ -110,11 +110,11 @@ class Calculator extends Component {
       displayValue = displayValue.substr(0, displayValue.length - 1);
       if (displayValue === '') displayValue = '0';
     } else {
-      displayValue === '0' ? displayValue = value : displayValue += value;
+      displayValue === '0' ? (displayValue = value) : (displayValue += value);
     }
 
     this.setState({ displayValue });
-  }
+  };
 
   render() {
     const { displayValue, numbers, operators } = this.state;

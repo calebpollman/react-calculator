@@ -16,12 +16,12 @@
 }
 
 .operator-key:hover {
-  background-color: var(--action-key-color-hover); 
+  background-color: var(--action-key-color-hover);
 }
 
 .number-key {
   background-color: var(--number-key-color);
-  width: calc(100%/3);
+  width: calc(100% / 3);
 }
 
 .number-key:hover {

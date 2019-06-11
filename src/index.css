@@ -27,7 +27,7 @@ app variables
   /* font weights */
   --display-text-weight: 400;
   --key-text-weight: 700;
-  
+
   /* calculator dimensions */
   --calculator-height: 72%;
   --calculator-width: 36%;
@@ -57,7 +57,9 @@ app variables
 app CSS reset  
 */
 
-body, div, p {
+body,
+div,
+p {
   margin: 0;
   padding: 0;
 }
