@@ -1,8 +1,11 @@
 # TDD React
 
+A simple Calculator app created for a blog post at [testdriven.io](https://testdriven.io/blog/tdd-with-react-jest-and-enzyme-part-one/).
+
 ## Local Setup
+
 ```sh
-$ git clone git@github.com:testdrivenio/react-calculator.git
+$ git clone git@github.com:calebpollman/react-calculator.git
 ```
 
 ```sh
@@ -10,15 +13,17 @@ $ cd react-calculator
 ```
 
 ```sh
-$ yarn install
+$ npm install
 ```
 
 ## Run Locally
+
 ```sh
-$ yarn start
+$ npm start
 ```
 
 ## Run Tests
+
 ```sh
-$ yarn test
+$ npm test
 ```
