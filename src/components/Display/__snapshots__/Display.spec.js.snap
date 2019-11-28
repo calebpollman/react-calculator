@@ -1,3 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Display should render correctly 1`] = `ShallowWrapper {}`;
+exports[`Display should render correctly 1`] = `
+<div
+  className="display-container"
+>
+  <p
+    className="display-value"
+  >
+    a display value
+  </p>
+</div>
+`;
