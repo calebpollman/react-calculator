@@ -1,32 +1,30 @@
-import React, { Component } from 'react';
-import './Calculator.css';
-
-import Display from '../Display/Display';
-import Keypad from '../Keypad/Keypad';
-import './Calculator.css';
+import React, { Component } from "react";
+import Display from "../Display/Display";
+import Keypad from "../Keypad/Keypad";
+import "./Calculator.css";
 
 class Calculator extends Component {
   state = {
-    displayValue: '0',
-    numbers: ['9', '8', '7', '6', '5', '4', '3', '2', '1', '.', '0', 'ce'],
-    operators: ['/', 'x', '-', '+'],
-    selectedOperator: '',
-    storedValue: '',
+    displayValue: "0",
+    numbers: ["9", "8", "7", "6", "5", "4", "3", "2", "1", ".", "0", "ce"],
+    operators: ["/", "x", "-", "+"],
+    selectedOperator: "",
+    storedValue: ""
   };
 
-  componentWillMount = () => {
-    document.addEventListener('keydown', this.handleKeyPress);
+  UNSAFE_componentWillMount = () => {
+    document.addEventListener("keydown", this.handleKeyPress);
   };
 
   componentWillUnmount = () => {
-    document.removeEventListener('keydown', this.handleKeyPress);
+    document.removeEventListener("keydown", this.handleKeyPress);
   };
 
   handleKeyPress = event => {
     const { numbers, operators } = this.state;
 
-    if (event.key === 'Backspace') this.updateDisplay(event, 'ce');
-    if (event.key === 'Enter' || event.key === '=') this.callOperator(event);
+    if (event.key === "Backspace") this.updateDisplay(event, "ce");
+    if (event.key === "Enter" || event.key === "=") this.callOperator(event);
 
     numbers.forEach(number => {
       if (event.key === number) {
@@ -49,34 +47,39 @@ class Calculator extends Component {
     storedValue = parseInt(storedValue, 10);
 
     switch (selectedOperator) {
-      case '+':
+      case "+":
         displayValue = storedValue + displayValue;
         break;
-      case '-':
+      case "-":
         displayValue = storedValue - displayValue;
         break;
-      case 'x':
+      case "x":
         displayValue = storedValue * displayValue;
         break;
-      case '/':
+      case "/":
         displayValue = storedValue / displayValue;
         break;
       default:
-        displayValue = '0';
+        displayValue = "0";
     }
 
     displayValue = displayValue.toString();
-    selectedOperator = '';
-    if (displayValue === 'NaN' || displayValue === 'Infinity') displayValue = '0';
+    selectedOperator = "";
+    if (displayValue === "NaN" || displayValue === "Infinity")
+      displayValue = "0";
 
-    this.setState({ displayValue, selectedOperator, storedValue: updateStoredValue });
+    this.setState({
+      displayValue,
+      selectedOperator,
+      storedValue: updateStoredValue
+    });
   };
 
   handleKeyPress = event => {
     const { numbers, operators } = this.state;
 
-    if (event.key === 'Backspace') this.updateDisplay('ce');
-    if (event.key === 'Enter' || event.key === '=') this.callOperator();
+    if (event.key === "Backspace") this.updateDisplay("ce");
+    if (event.key === "Enter" || event.key === "=") this.callOperator();
 
     numbers.forEach(number => {
       if (event.key === number) this.updateDisplay(number);
@@ -90,9 +93,9 @@ class Calculator extends Component {
   setOperator = value => {
     let { displayValue, selectedOperator, storedValue } = this.state;
 
-    if (selectedOperator === '') {
+    if (selectedOperator === "") {
       storedValue = displayValue;
-      displayValue = '0';
+      displayValue = "0";
       selectedOperator = value;
     } else {
       selectedOperator = value;
@@ -104,13 +107,13 @@ class Calculator extends Component {
   updateDisplay = value => {
     let { displayValue } = this.state;
 
-    if (value === '.' && displayValue.includes('.')) value = '';
+    if (value === "." && displayValue.includes(".")) value = "";
 
-    if (value === 'ce') {
+    if (value === "ce") {
       displayValue = displayValue.substr(0, displayValue.length - 1);
-      if (displayValue === '') displayValue = '0';
+      if (displayValue === "") displayValue = "0";
     } else {
-      displayValue === '0' ? (displayValue = value) : (displayValue += value);
+      displayValue === "0" ? (displayValue = value) : (displayValue += value);
     }
 
     this.setState({ displayValue });

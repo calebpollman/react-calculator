@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './Display.css';
+import React from "react";
+import PropTypes from "prop-types";
+import "./Display.css";
 
 const Display = ({ displayValue }) => (
   <div className="display-container">
@@ -10,6 +10,6 @@ const Display = ({ displayValue }) => (
 
 Display.propTypes = { displayValue: PropTypes.string.isRequired };
 
-Display.defaultProps = { displayValue: 'default' };
+Display.defaultProps = { displayValue: "default" };
 
 export default Display;
