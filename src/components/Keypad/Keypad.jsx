@@ -1,7 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./Keypad.css";
-
 import Key from "../Key/Key";
 import "./Keypad.css";
 
