@@ -1,15 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Key should render correctly 1`] = `
-<div
-  className="key-container number-key"
-  onClick={[Function]}
-  onKeyPress={[Function]}
->
-  <p
-    className="key-value"
-  >
-    7
-  </p>
-</div>
-`;
+exports[`Key should render correctly 1`] = `ShallowWrapper {}`;
