@@ -22,25 +22,6 @@ class Calculator extends Component {
     document.removeEventListener('keydown', this.handleKeyPress);
   };
 
-  handleKeyPress = event => {
-    const { numbers, operators } = this.state;
-
-    if (event.key === 'Backspace') this.updateDisplay(event, 'ce');
-    if (event.key === 'Enter' || event.key === '=') this.callOperator(event);
-
-    numbers.forEach(number => {
-      if (event.key === number) {
-        this.updateDisplay(event, number);
-      }
-    });
-
-    operators.forEach(operator => {
-      if (event.key === operator) {
-        this.setOperator(event, operator);
-      }
-    });
-  };
-
   callOperator = () => {
     let { displayValue, selectedOperator, storedValue } = this.state;
     const updateStoredValue = displayValue;
