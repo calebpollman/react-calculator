@@ -1,10 +1,43 @@
-/*
-app variables
-*/
+/* app variables */
 
 :root {
+    /* background colors */
+    --display-background-color: #1d1f1f;
+
     /* font */
     --main-font: 'Orbitron', sans-serif;
+
+    /* font colors */
+    --display-text-color: #23e000;
+
+    /* font sizes */
+    --display-text-size: 4em;
+
+    /* font weights */
+    --display-text-weight: 400;
+
+    /* calculator dimensions */
+    --calculator-height: 72%;
+    --calculator-width: 36%;
+
+    /* display dimensions */
+    --display-height: 24%;
+    --display-width: 92%;
+}
+
+/*
+media query for tablet or smaller screen
+*/
+
+@media screen and (max-width: 1024px) {
+    :root {
+        /* font sizes */
+        --display-text-size: 10em;
+
+        /* calculator dimensions */
+        --calculator-height: 100%;
+        --calculator-width: 100%;
+    }
 }
 
 /*

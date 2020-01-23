@@ -15,4 +15,6 @@ describe('App', () => {
     it('should render the Calculator Component', () => {
         expect(wrapper.containsMatchingElement(<Calculator />)).toEqual(true);
     });
+
+    it('should render correctly', () => expect(wrapper).toMatchSnapshot());
 });
