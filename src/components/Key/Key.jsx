@@ -7,9 +7,7 @@ const Key = ({ keyAction, keyType, keyValue }) => (
         className={`key-container ${keyType}`}
         onClick={() => keyAction(keyValue)}
     >
-        <p className="key-value">
-        {keyValue}
-        </p>
+        <p className="key-value">{(keyValue === '/') ? <span>&#247;</span> : keyValue}</p>
     </div>
 );
 
