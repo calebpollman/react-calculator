@@ -14,7 +14,7 @@ class Calculator extends Component {
     storedValue: '',
   };
 
-  componentWillMount = () => {
+  componentDidMount = () => {
     document.addEventListener('keydown', this.handleKeyPress);
   };
 
@@ -53,22 +53,22 @@ class Calculator extends Component {
     this.setState({ displayValue, selectedOperator, storedValue: updateStoredValue });
   };
 
-  handleKeyPress = event => {
+  handleKeyPress = (event) => {
     const { numbers, operators } = this.state;
 
     if (event.key === 'Backspace') this.updateDisplay('ce');
     if (event.key === 'Enter' || event.key === '=') this.callOperator();
 
-    numbers.forEach(number => {
+    numbers.forEach((number) => {
       if (event.key === number) this.updateDisplay(number);
     });
 
-    operators.forEach(operator => {
+    operators.forEach((operator) => {
       if (event.key === operator) this.setOperator(operator);
     });
   };
 
-  setOperator = value => {
+  setOperator = (value) => {
     let { displayValue, selectedOperator, storedValue } = this.state;
 
     if (selectedOperator === '') {
@@ -82,7 +82,7 @@ class Calculator extends Component {
     this.setState({ displayValue, selectedOperator, storedValue });
   };
 
-  updateDisplay = value => {
+  updateDisplay = (value) => {
     let { displayValue } = this.state;
 
     if (value === '.' && displayValue.includes('.')) value = '';
