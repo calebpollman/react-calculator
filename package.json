@@ -16,7 +16,7 @@
     "enzyme": "^3.11.0",
     "enzyme-to-json": "^3.6.2",
     "prettier": "^2.2.1",
-    "react-scripts": "4.0.3",
+    "react-scripts": "5.0.1",
     "react-test-renderer": "^17.0.2"
   },
   "scripts": {
